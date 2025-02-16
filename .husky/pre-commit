@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+./node_modules/.bin/lint-staged
+
+# Debug
+# exit 1
