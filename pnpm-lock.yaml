@@ -18,15 +18,18 @@ importers:
         specifier: 0.13.0
         version: 0.13.0
       type-fest:
-        specifier: 4.34.1
-        version: 4.34.1
+        specifier: 4.35.0
+        version: 4.35.0
     devDependencies:
       '@alexilyaev/browserslist-config':
         specifier: 0.1.3
         version: 0.1.3
       '@alexilyaev/configs':
-        specifier: 0.4.8
-        version: 0.4.8
+        specifier: 0.5.1
+        version: 0.5.1
+      '@eslint/compat':
+        specifier: 1.2.6
+        version: 1.2.6(eslint@9.20.1)
       '@stylistic/eslint-plugin':
         specifier: 3.1.0
         version: 3.1.0(eslint@9.20.1)(typescript@5.7.3)
@@ -109,8 +112,8 @@ packages:
     resolution: {integrity: sha512-JmGF/jX7853DlnLkHiol9+Syb+WNezR+jG4nNAx/klbszezXJnGETuBCm9oX9SuifRN+bHtQFqxaOgBFKIb1cQ==}
     engines: {node: '>=18.12.0'}
 
-  '@alexilyaev/configs@0.4.8':
-    resolution: {integrity: sha512-66CoKjJbsUMeWWEj927x6pfkmWKEXiSTcBSsp15kJ7EBJTIjzdmwK9BrWoaKiLBO8PT+NyjjDzetpiEZNv25jw==}
+  '@alexilyaev/configs@0.5.1':
+    resolution: {integrity: sha512-yQVkq/t6N3ng2/EY1jTYbJLnDotkCUzXlSCCC+N7x3xrdMrSJq9G7c0obGbLi0/xk/vuW/1ucxNuaEG0ik94WA==}
     engines: {node: '>=18.12.0'}
 
   '@babel/code-frame@7.26.2':
@@ -283,6 +286,15 @@ packages:
   '@eslint-community/regexpp@4.12.1':
     resolution: {integrity: sha512-CCZCDJuduB9OUkFkY2IgppNZMi2lBQgD2qzwXkEia16cge2pijY/aXi96CJMquDMn3nJdlPV1A5KrJEXwfLNzQ==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
+
+  '@eslint/compat@1.2.6':
+    resolution: {integrity: sha512-k7HNCqApoDHM6XzT30zGoETj+D+uUcZUb+IVAJmar3u6bvHf7hhHJcWx09QHj4/a2qrKZMWU0E16tvkiAdv06Q==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^9.10.0
+    peerDependenciesMeta:
+      eslint:
+        optional: true
 
   '@eslint/config-array@0.19.2':
     resolution: {integrity: sha512-GNKqxfHG2ySmJOBSHg7LxeUx4xpuCoFjacmlCoYWEbaPXLwvfIjixRI12xCQZeULksQb23uiA8F40w5TojpV7w==}
@@ -2217,8 +2229,8 @@ packages:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
 
-  type-fest@4.34.1:
-    resolution: {integrity: sha512-6kSc32kT0rbwxD6QL1CYe8IqdzN/J/ILMrNK+HMQCKH3insCDRY/3ITb0vcBss0a3t72fzh2YSzj8ko1HgwT3g==}
+  type-fest@4.35.0:
+    resolution: {integrity: sha512-2/AwEFQDFEy30iOLjrvHDIH7e4HEWH+f1Yl1bI5XMqzuoCUqwYCdxachgsgv0og/JdVZUhbfjcJAoHj5L1753A==}
     engines: {node: '>=16'}
 
   typed-array-buffer@1.0.3:
@@ -2426,7 +2438,7 @@ snapshots:
 
   '@alexilyaev/browserslist-config@0.1.3': {}
 
-  '@alexilyaev/configs@0.4.8': {}
+  '@alexilyaev/configs@0.5.1': {}
 
   '@babel/code-frame@7.26.2':
     dependencies:
@@ -2519,6 +2531,10 @@ snapshots:
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.1': {}
+
+  '@eslint/compat@1.2.6(eslint@9.20.1)':
+    optionalDependencies:
+      eslint: 9.20.1
 
   '@eslint/config-array@0.19.2':
     dependencies:
@@ -4619,7 +4635,7 @@ snapshots:
 
   ts-extras@0.13.0:
     dependencies:
-      type-fest: 4.34.1
+      type-fest: 4.35.0
 
   tsconfig-paths@3.15.0:
     dependencies:
@@ -4636,7 +4652,7 @@ snapshots:
 
   type-fest@0.8.1: {}
 
-  type-fest@4.34.1: {}
+  type-fest@4.35.0: {}
 
   typed-array-buffer@1.0.3:
     dependencies:

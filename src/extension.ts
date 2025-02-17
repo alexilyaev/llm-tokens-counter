@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
       ? document.getText()
       : document.getText(selection);
 
-    statusBar.text = `Token Count: ${text.length}`;
+    statusBar.text = `Tokens: ${text.length}`;
     statusBar.show();
   }
 

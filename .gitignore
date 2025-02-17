@@ -43,6 +43,7 @@ Thumbs.db
 .idea
 .project
 .vscode
+.vscode-test
 
 # Build stuff
 /dist

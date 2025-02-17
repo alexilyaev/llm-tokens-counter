@@ -1,7 +1,7 @@
 import { builtinModules } from 'node:module';
 import path from 'node:path';
 import { defineConfig } from 'vite';
-import { readNodeVersion } from './infra/readNodeVersion.mts';
+import { readNodeVersion } from './infra/readNodeVersion';
 
 const externalPackagesRegex = /^[^./]/;
 
@@ -21,7 +21,7 @@ export default defineConfig({
     target: `node${nodeVersion}`,
     outDir: 'dist',
     emptyOutDir: true,
-    minify: false,
+    minify: true,
     sourcemap: true,
   },
 });
