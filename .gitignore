@@ -40,15 +40,16 @@ node_modules
 Thumbs.db
 
 # Editors stuff
-.idea
-.project
-.vscode
-.vscode-test
+.idea/**
+.project/**
+.vscode/**
+.vscode-test/**
 
 # Build stuff
 /dist
 /app/dist
 /build
+/out
 
 # Testing
 /coverage
@@ -67,7 +68,6 @@ db.sqlite
 
 # next.js
 /.next
-/out
 next-env.d.ts
 
 # Deployment Platforms
