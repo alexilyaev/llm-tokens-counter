@@ -9,6 +9,7 @@ const nodeVersion = await readNodeVersion();
 const cwd = process.cwd();
 const entryFilePath = path.resolve(cwd, 'src/extension.ts');
 const testFilePaths = globSync(path.resolve(cwd, 'src/**/*.spec.ts'));
+const isProduction = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
   build: {
@@ -21,8 +22,8 @@ export default defineConfig({
     },
     target: `node${nodeVersion}`,
     outDir: 'dist',
-    emptyOutDir: true,
-    minify: true,
-    sourcemap: true,
+    emptyOutDir: false,
+    minify: isProduction,
+    sourcemap: !isProduction,
   },
 });

@@ -73,7 +73,7 @@ next-env.d.ts
 # Deployment Platforms
 .vercel
 
-# Project specific
+# Specific to this project
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/tasks.json
