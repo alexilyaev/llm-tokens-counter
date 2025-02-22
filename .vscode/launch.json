@@ -13,6 +13,16 @@
       "outFiles": ["${workspaceFolder}/dist/**/*.cjs"],
       "preLaunchTask": "${defaultBuildTask}",
       "sourceMaps": true
+    },
+    {
+      "name": "Extension Tests",
+      "type": "extensionHost",
+      "request": "launch",
+      "testConfiguration": "${workspaceFolder}/.vscode-test.js",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}"
+        // "--extensionTestsPath=${workspaceFolder}/test/suite/index"
+      ]
     }
   ]
 }

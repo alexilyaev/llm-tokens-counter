@@ -1,15 +1,33 @@
-import { describe, expect, test } from 'vitest';
+/**
+ * @example
+ * https://github.com/yzhang-gh/vscode-markdown/blob/master/src/test/suite/integration/toc.test.ts
+ */
+
+import assert from 'assert';
 
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
-import * as vscode from 'vscode';
-// import * as myExtension from '../extension';
+import vscode from 'vscode';
 
-describe('Extension Test Suite', () => {
-  vscode.window.showInformationMessage('Start all tests.');
+// import myExtension from './extension';
 
-  test('Sample test', () => {
-    expect([1, 2, 3].indexOf(5)).toBe(-1);
-    expect([1, 2, 3].indexOf(0)).toBe(-1);
+suite('Extension Test Suite', () => {
+  suiteSetup(async (done) => {
+    const resPromise = vscode.window.showInformationMessage('Start all tests.');
+    await resPromise;
+
+    done();
+  });
+
+  suiteTeardown(async (done) => {
+    const resPromise = vscode.window.showInformationMessage('All tests done!');
+    await resPromise;
+
+    done();
+  });
+
+  test('Sample test', async () => {
+    assert.strictEqual(-1, [1, 2, 3].indexOf(5));
+    assert.strictEqual(-1, [1, 2, 3].indexOf(0));
   });
 });

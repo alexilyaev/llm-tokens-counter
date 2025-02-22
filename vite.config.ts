@@ -22,7 +22,7 @@ export default defineConfig({
     },
     target: `node${nodeVersion}`,
     outDir: 'dist',
-    emptyOutDir: false,
+    emptyOutDir: true,
     minify: isProduction,
     sourcemap: !isProduction,
   },

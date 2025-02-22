@@ -19,8 +19,8 @@
     "format-eslint": "eslint --fix '**/*.{js,cjs,ts,mts,tsx}'",
     "format-prettier": "prettier --write '**/*.{js,cjs,ts,mts,tsx,html,css,json,md,sql}'",
     "format": "pnpm format-eslint && pnpm format-prettier",
-    "pretest": "pnpm run build && pnpm run lint",
     "coverage": "vitest --coverage.enabled --coverage.provider=istanbul --coverage.all",
+    "pretest": "pnpm run build",
     "test": "vscode-test",
     "test-vitest": "vitest run",
     "test-watch": "vitest watch",
@@ -28,6 +28,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@types/mocha": "10.0.10",
     "semver": "7.7.1",
     "ts-essentials": "10.0.4",
     "ts-extras": "0.13.0",
@@ -57,6 +58,7 @@
     "eslint-plugin-unicorn": "56.0.1",
     "husky": "9.1.7",
     "lint-staged": "15.4.3",
+    "mocha": "11.1.0",
     "prettier": "3.5.1",
     "tinyglobby": "0.2.10",
     "typescript": "5.7.3",
